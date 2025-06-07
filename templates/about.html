@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            padding-top: 0px;
+            background-color: #f8f9fa;
+        }
+
+        /* Topbar styling */
+        .topbar {
+            background-color: #28a745;
+            padding: 10px 0;
+        }
+
+        .topbar .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .topbar .nav-link {
+            color: white;
+        }
+
+        .topbar .nav-link:hover {
+            color: #f8f9fa;
+        }
+
+        .topbar .nav-link.active {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            font-weight: 600;
+        }
+
+        /* Developer Cards */
+        .dev-card-link {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease;
+            display: block;
+        }
+
+        .dev-card-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-hover {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card-hover::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #28a745;
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover::before {
+            width: 10px;
+            background-color: #219150;
+        }
+
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="topbar navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">GadgetGuru</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container py-5">
+
+    <!-- Section 1: About the project -->
+    <div class="mb-5">
+        <h2>About Our Project</h2>
+        <p>
+            Our project 'GadgetGuru' is a smart AI-based recommendation system that assists users in choosing the best laptops
+            based on their specific needs using NLP and Machine Learning. It simplifies the decision-making process
+            for non-technical users by recommending laptops based on real-time data and user-friendly chatbot interactions.
+        </p>
+    </div>
+
+    <!-- Section 2: Research paper -->
+    <div class="mb-5">
+        <h2>Research Publication</h2>
+        <p>
+            Our research paper titled <strong>"Smart Laptop Recommender System Using NLP and Machine Learning"</strong> has been published in the <strong>International Research Journal of Modernization in Engineering Technology and Science (IRJMETS)</strong>, November 2024 edition.
+
+            In this work, we proposed an intelligent recommendation system that leverages Natural Language Processing and Machine Learning algorithms to understand user needs and suggest the most suitable laptops based on technical requirements, preferences, and market availability. This system is designed especially for non-technical users to simplify their purchase decisions through an intuitive and efficient chatbot-based interface.<br>
+            <a class="highlight" href="https://www.irjmets.com/uploadedfiles/paper//issue_11_november_2024/64186/final/fin_irjmets1732093118.pdf" target="_blank">Click here to read our research paper</a>
+        </p>
+    </div>
+
+    <!-- Section 3: Developed by -->
+    <div>
+        <h2>Developed By</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <a href="https://linkedin.com/in/aryandhone555" target="_blank" class="dev-card-link">
+                    <div class="card card-hover h-100 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/person1.jpg' %}" alt="Aryan Dhone" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0 text-success fw-bold">Aryan Dhone</h5>
+                                <a href="mailto:er.aryandhone@gmail.com" class="text-decoration-none">er.aryandhone@gmail.com</a><br>
+                                <span class="text-muted small">LinkedIn Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://www.linkedin.com/in/justhrk/" target="_blank" class="dev-card-link">
+                    <div class="card card-hover h-100 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/person2.jpg' %}" alt="Harshal Kumbhalkar" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0 text-success fw-bold">Harshal Kumbhalkar</h5>
+                                <a href="mailto:harshal.kumbhalkar@outlook.com" class="text-decoration-none">harshal.kumbhalkar@outlook.com</a><br>
+                                <span class="text-muted small">LinkedIn Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://in.linkedin.com/in/tejas-bachhav-488a2a233/" target="_blank" class="dev-card-link">
+                    <div class="card card-hover h-100 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/person3.jpg' %}" alt="Tejas Bacchav" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0 text-success fw-bold">Tejas Bacchav</h5>
+                                <a href="mailto:tejasbachhav11@gmail.com" class="text-decoration-none">tejasbachhav11@gmail.com</a><br>
+                                <span class="text-muted small">LinkedIn Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://www.linkedin.com/in/rushikesh-fegade-508625231/" target="_blank" class="dev-card-link">
+                    <div class="card card-hover h-100 shadow-sm p-3">
+                        <div class="d-flex align-items-center">
+                            <img src="{% static 'images/person4.jpg' %}" alt="Rushikesh Fegade" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0 text-success fw-bold">Rushikesh Fegade</h5>
+                                <a href="mailto:rushikeshfegade44@gmail.com" class="text-decoration-none">rushikeshfegade44@gmail.com</a><br>
+                                <span class="text-muted small">LinkedIn Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
